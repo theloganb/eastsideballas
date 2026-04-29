@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>East Side Ballas | Official</title>
+    <style>
+        :root {
+            --bg: #050505; /* Deep Black */
+            --card-bg: #110a18; /* Dark Purple Tint */
+            --accent: #a020f0; /* Ballas Purple */
+            --accent-glow: rgba(160, 32, 240, 0.3);
+            --text-main: #ffffff;
+            --text-dim: #b3b3b3;
+            --border: #2a1b3d;
+        }
+
+        * { box-sizing: border-box; transition: 0.3s; }
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background-color: var(--bg); 
+            color: var(--text-main); 
+            margin: 0; 
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(0,0,0,0.9);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            border-bottom: 2px solid var(--accent);
+            z-index: 1000;
+        }
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); text-shadow: 0 0 10px var(--accent); }
+
+        /* Container */
+        .container { max-width: 1100px; margin: auto; padding: 4rem 2rem; }
+        section { display: none; animation: fadeIn 0.6s ease; }
+        section.active { display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Home Page */
+        .hero { text-align: center; padding: 4rem 0; }
+        .hero h1 { font-size: 4.5rem; margin-bottom: 1rem; letter-spacing: -3px; text-transform: uppercase; font-style: italic; }
+        .hero p { color: var(--text-dim); font-size: 1.3rem; max-width: 700px; margin: auto; line-height: 1.8; }
+        .main-logo { 
+            width: 200px; height: 200px; border-radius: 50%; 
+            border: 4px solid var(--accent); margin-bottom: 2rem; 
+            box-shadow: 0 0 40px var(--accent-glow);
+            background: #000;
+        }
+
+        /* Grid & Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 2rem; }
+        .card { 
+            background: var(--card-bg); 
+            border: 1px solid var(--border);
+            padding: 2.5rem; 
+            border-radius: 20px; 
+            text-align: center;
+            position: relative;
+            box-shadow:
