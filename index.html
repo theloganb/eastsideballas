@@ -75,4 +75,28 @@
             border-radius: 20px; 
             text-align: center;
             position: relative;
-            box-shadow:
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .card:hover { 
+            border-color: var(--accent); 
+            transform: translateY(-10px); 
+            box-shadow: 0 0 25px var(--accent-glow);
+        }
+        .card img { width: 110px; height: 110px; border-radius: 50%; margin-bottom: 1.5rem; border: 3px solid var(--accent); padding: 5px; background: #000; }
+        .rank { color: var(--accent); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 900; margin-bottom: 0.5rem; }
+
+        /* Store Elements */
+        .btn { 
+            background: var(--accent); 
+            color: white; 
+            border: none; 
+            padding: 12px 30px; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-weight: bold; 
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px var(--accent-glow);
+        }
+        .btn:hover { transform: scale(1.05); filter: brightness(1.2); }
+        
+        .store-controls { background: #0f0a14; padding: 2rem; border-radius: 20px; margin-top: 4rem;
